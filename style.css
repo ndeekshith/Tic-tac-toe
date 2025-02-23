@@ -1,0 +1,80 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 columns of 100px width */
+    grid-template-rows: repeat(3, 100px);    /* 3 rows of 100px height */
+    gap: 5px; /* Spacing between cells */
+    margin-bottom: 20px;
+}
+
+.cell {
+    background-color: #eee;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection on click */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+.cell:hover {
+    background-color: #ddd;
+}
+
+.cell.x {
+    color: #e74c3c; /* Red for X */
+}
+
+.cell.o {
+    color: #3498db; /* Blue for O */
+}
+
+.cell.winner {
+    background-color: #c2e5b8; /* Light green for winning cells */
+    border-color: #a3d28a;
+}
+
+#reset-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reset-button:hover {
+    background-color: #2980b9;
+}
